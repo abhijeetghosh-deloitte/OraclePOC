@@ -1,0 +1,39 @@
+{
+  "subjectArea" : {
+    "name" : "P&L TRENDS",
+    "sourceBusinessModel" : "businessModel:UNILEVER_BMM",
+    "tableOrder" : [ {
+      "name" : "presentationTable:P&L TRENDS.DIM_ACCOUNT"
+    }, {
+      "name" : "presentationTable:P&L TRENDS.DIM_ACCOUNT_NEW"
+    }, {
+      "name" : "presentationTable:P&L TRENDS.DIM_CHANNEL"
+    }, {
+      "name" : "presentationTable:P&L TRENDS.DIM_CHANNEL_NEW"
+    }, {
+      "name" : "presentationTable:P&L TRENDS.DIM_CUSTOMER"
+    }, {
+      "name" : "presentationTable:P&L TRENDS.DIM_CUSTOMER_NEW"
+    }, {
+      "name" : "presentationTable:P&L TRENDS.DIM_ENTITY"
+    }, {
+      "name" : "presentationTable:P&L TRENDS.DIM_ENTITY_UPDATED"
+    }, {
+      "name" : "presentationTable:P&L TRENDS.DIM_MANAGEMENT_UNIT"
+    }, {
+      "name" : "presentationTable:P&L TRENDS.DIM_MANAGEMENT_UNIT_NEW"
+    }, {
+      "name" : "presentationTable:P&L TRENDS.DIM_PERIOD"
+    }, {
+      "name" : "presentationTable:P&L TRENDS.DIM_PERIOD_NEW"
+    }, {
+      "name" : "presentationTable:P&L TRENDS.DIM_PRODUCT"
+    }, {
+      "name" : "presentationTable:P&L TRENDS.DIM_PRODUCT_RT"
+    }, {
+      "name" : "presentationTable:P&L TRENDS.FACT_SALES_NEW"
+    }, {
+      "name" : "presentationTable:P&L TRENDS.TARGET_01"
+    } ]
+  }
+}

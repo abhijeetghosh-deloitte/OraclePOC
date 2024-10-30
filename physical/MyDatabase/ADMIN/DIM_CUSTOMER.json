@@ -1,0 +1,26 @@
+{
+  "physicalTable" : {
+    "name" : "DIM_CUSTOMER",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "CUSTOMER",
+      "dataType" : "VARCHAR",
+      "length" : 100,
+      "nullable" : true
+    }, {
+      "name" : "PARENT",
+      "dataType" : "VARCHAR",
+      "length" : 100,
+      "nullable" : true
+    }, {
+      "name" : "ALIAS_DEFAULT",
+      "dataType" : "VARCHAR",
+      "length" : 150,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

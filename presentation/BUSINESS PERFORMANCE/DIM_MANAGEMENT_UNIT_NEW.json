@@ -1,0 +1,18 @@
+{
+  "presentationTable" : {
+    "name" : "DIM_MANAGEMENT_UNIT_NEW",
+    "presentationColumns" : [ {
+      "name" : "MEMBER_KEY",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_MANAGEMENT_UNIT_NEW.MEMBER_KEY"
+    }, {
+      "name" : "ANCESTOR_KEY",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_MANAGEMENT_UNIT_NEW.ANCESTOR_KEY"
+    }, {
+      "name" : "RELATIONSHIP_DISTANCE",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_MANAGEMENT_UNIT_NEW.RELATIONSHIP_DISTANCE"
+    }, {
+      "name" : "IS_LEAF",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_MANAGEMENT_UNIT_NEW.IS_LEAF"
+    } ]
+  }
+}

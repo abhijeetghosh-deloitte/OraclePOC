@@ -1,0 +1,74 @@
+{
+  "logicalTable" : {
+    "name" : "DIM_PRODUCT_RT",
+    "type" : "DIMENSION",
+    "logicalColumns" : [ {
+      "name" : "MEMBER_KEY",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_PRODUCT_RT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_PRODUCT_RT.MEMBER_KEY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "ANCESTOR_KEY",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_PRODUCT_RT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_PRODUCT_RT.ANCESTOR_KEY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "RELATIONSHIP_DISTANCE",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_PRODUCT_RT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_PRODUCT_RT.RELATIONSHIP_DISTANCE" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "IS_LEAF",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_PRODUCT_RT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_PRODUCT_RT.IS_LEAF" ]
+          }
+        } ]
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "DIM_PRODUCT_RT",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:MyDatabase.ADMIN.DIM_PRODUCT_RT" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "primaryKey" : [ "MEMBER_KEY" ]
+  }
+}

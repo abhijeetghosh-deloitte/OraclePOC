@@ -1,0 +1,74 @@
+{
+  "logicalTable" : {
+    "name" : "DIM_PERIOD_NEW",
+    "type" : "DIMENSION",
+    "logicalColumns" : [ {
+      "name" : "MEMBER_KEY",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_PERIOD_NEW",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_PERIOD_NEW.MEMBER_KEY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "ANCESTOR_KEY",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_PERIOD_NEW",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_PERIOD_NEW.ANCESTOR_KEY" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "RELATIONSHIP_DISTANCE",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_PERIOD_NEW",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_PERIOD_NEW.RELATIONSHIP_DISTANCE" ]
+          }
+        } ]
+      }
+    }, {
+      "name" : "IS_LEAF",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_PERIOD_NEW",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_PERIOD_NEW.IS_LEAF" ]
+          }
+        } ]
+      }
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "DIM_PERIOD_NEW",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:MyDatabase.ADMIN.DIM_PERIOD_NEW" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "primaryKey" : [ "MEMBER_KEY" ]
+  }
+}

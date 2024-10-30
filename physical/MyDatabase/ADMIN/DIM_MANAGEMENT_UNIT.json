@@ -1,0 +1,26 @@
+{
+  "physicalTable" : {
+    "name" : "DIM_MANAGEMENT_UNIT",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "MANAGEMENTUNIT",
+      "dataType" : "VARCHAR",
+      "length" : 150,
+      "nullable" : true
+    }, {
+      "name" : "PARENT",
+      "dataType" : "VARCHAR",
+      "length" : 100,
+      "nullable" : true
+    }, {
+      "name" : "ALIAS_DEFAULT",
+      "dataType" : "VARCHAR",
+      "length" : 150,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

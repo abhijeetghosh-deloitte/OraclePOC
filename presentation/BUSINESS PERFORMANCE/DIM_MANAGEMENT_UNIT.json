@@ -1,0 +1,20 @@
+{
+  "presentationTable" : {
+    "name" : "DIM_MANAGEMENT_UNIT",
+    "presentationColumns" : [ {
+      "name" : "MANAGEMENTUNIT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_MANAGEMENT_UNIT.MANAGEMENTUNIT"
+    }, {
+      "name" : "PARENT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_MANAGEMENT_UNIT.PARENT"
+    }, {
+      "name" : "ALIAS_DEFAULT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_MANAGEMENT_UNIT.ALIAS_DEFAULT"
+    } ],
+    "hierarchies" : [ {
+      "name" : "MANAGEMENT UNIT PARENT CHILD",
+      "sourceLogicalTable" : "logicalTable:UNILEVER_BMM.DIM_MANAGEMENT_UNIT",
+      "displayColumn" : "presentationColumn:BUSINESS PERFORMANCE.DIM_MANAGEMENT_UNIT.ALIAS_DEFAULT"
+    } ]
+  }
+}

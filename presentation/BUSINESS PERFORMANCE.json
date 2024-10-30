@@ -1,0 +1,39 @@
+{
+  "subjectArea" : {
+    "name" : "BUSINESS PERFORMANCE",
+    "sourceBusinessModel" : "businessModel:UNILEVER_BMM",
+    "tableOrder" : [ {
+      "name" : "presentationTable:BUSINESS PERFORMANCE.FACT_SALES_NEW"
+    }, {
+      "name" : "presentationTable:BUSINESS PERFORMANCE.DIM_ENTITY"
+    }, {
+      "name" : "presentationTable:BUSINESS PERFORMANCE.DIM_ENTITY_UPDATED"
+    }, {
+      "name" : "presentationTable:BUSINESS PERFORMANCE.DIM_ACCOUNT"
+    }, {
+      "name" : "presentationTable:BUSINESS PERFORMANCE.DIM_ACCOUNT_NEW"
+    }, {
+      "name" : "presentationTable:BUSINESS PERFORMANCE.DIM_PERIOD"
+    }, {
+      "name" : "presentationTable:BUSINESS PERFORMANCE.DIM_PERIOD_NEW"
+    }, {
+      "name" : "presentationTable:BUSINESS PERFORMANCE.DIM_MANAGEMENT_UNIT"
+    }, {
+      "name" : "presentationTable:BUSINESS PERFORMANCE.DIM_MANAGEMENT_UNIT_NEW"
+    }, {
+      "name" : "presentationTable:BUSINESS PERFORMANCE.DIM_CUSTOMER"
+    }, {
+      "name" : "presentationTable:BUSINESS PERFORMANCE.DIM_CUSTOMER_NEW"
+    }, {
+      "name" : "presentationTable:BUSINESS PERFORMANCE.DIM_CHANNEL"
+    }, {
+      "name" : "presentationTable:BUSINESS PERFORMANCE.DIM_CHANNEL_NEW"
+    }, {
+      "name" : "presentationTable:BUSINESS PERFORMANCE.DIM_PRODUCT_RT"
+    }, {
+      "name" : "presentationTable:BUSINESS PERFORMANCE.DIM_PRODUCT"
+    }, {
+      "name" : "presentationTable:BUSINESS PERFORMANCE.TARGET_01"
+    } ]
+  }
+}

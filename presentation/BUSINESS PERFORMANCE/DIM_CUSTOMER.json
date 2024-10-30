@@ -1,0 +1,20 @@
+{
+  "presentationTable" : {
+    "name" : "DIM_CUSTOMER",
+    "presentationColumns" : [ {
+      "name" : "CUSTOMER",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_CUSTOMER.CUSTOMER"
+    }, {
+      "name" : "PARENT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_CUSTOMER.PARENT"
+    }, {
+      "name" : "ALIAS_DEFAULT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_CUSTOMER.ALIAS_DEFAULT"
+    } ],
+    "hierarchies" : [ {
+      "name" : "CUSTOMER PARENT CHILD",
+      "sourceLogicalTable" : "logicalTable:UNILEVER_BMM.DIM_CUSTOMER",
+      "displayColumn" : "presentationColumn:BUSINESS PERFORMANCE.DIM_CUSTOMER.ALIAS_DEFAULT"
+    } ]
+  }
+}

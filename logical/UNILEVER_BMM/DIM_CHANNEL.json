@@ -1,0 +1,96 @@
+{
+  "logicalTable" : {
+    "name" : "DIM_CHANNEL",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "CHANNEL" ],
+    "logicalColumns" : [ {
+      "name" : "CHANNEL",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_CHANNEL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_CHANNEL.CHANNEL" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "PARENT",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_CHANNEL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_CHANNEL.PARENT" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "ALIAS_DEFAULT",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_CHANNEL",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_CHANNEL.ALIAS_DEFAULT" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "DIM_CHANNEL",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:MyDatabase.ADMIN.DIM_CHANNEL" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "PARENT_CHILD",
+    "parentChildHierarchy" : {
+      "name" : "CHANNEL PARENT CHILD",
+      "description" : "Parent-Child",
+      "logicalLevels" : [ {
+        "name" : "Total",
+        "numberOfElements" : 4,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Detail",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "CHANNEL" ],
+        "displayKey" : "ALIAS_DEFAULT",
+        "parentKey" : "PARENT"
+      } ],
+      "relationshipTables" : [ {
+        "logicalTableSource" : "DIM_CHANNEL",
+        "table" : "physicalTable:MyDatabase.ADMIN.DIM_CHANNEL_NEW",
+        "memberKey" : "MEMBER_KEY",
+        "parentKey" : "ANCESTOR_KEY",
+        "distance" : "RELATIONSHIP_DISTANCE",
+        "leafNodeIdentifier" : "IS_LEAF"
+      } ]
+    },
+    "joins" : [ {
+      "rightTable" : "logicalTable:UNILEVER_BMM.DIM_CHANNEL_NEW",
+      "joinType" : "INNER",
+      "cardinality" : "ONE_TO_MANY",
+      "drivingTable" : "None"
+    } ]
+  }
+}

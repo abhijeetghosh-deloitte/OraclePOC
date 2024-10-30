@@ -1,0 +1,159 @@
+{
+  "physicalTable" : {
+    "name" : "FACT_SALES_NEW",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "COUNTRY",
+      "dataType" : "VARCHAR",
+      "length" : 26,
+      "nullable" : true
+    }, {
+      "name" : "CURRENCY",
+      "dataType" : "VARCHAR",
+      "length" : 26,
+      "nullable" : true
+    }, {
+      "name" : "CUSTOMER",
+      "dataType" : "VARCHAR",
+      "length" : 26,
+      "nullable" : true
+    }, {
+      "name" : "MANAGEMENTUNIT",
+      "dataType" : "VARCHAR",
+      "length" : 26,
+      "nullable" : true
+    }, {
+      "name" : "ENTITY",
+      "dataType" : "VARCHAR",
+      "length" : 20,
+      "nullable" : true
+    }, {
+      "name" : "CHANNEL",
+      "dataType" : "VARCHAR",
+      "length" : 20,
+      "nullable" : true
+    }, {
+      "name" : "VERSION",
+      "dataType" : "VARCHAR",
+      "length" : 26,
+      "nullable" : true
+    }, {
+      "name" : "SCENARIO",
+      "dataType" : "VARCHAR",
+      "length" : 26,
+      "nullable" : true
+    }, {
+      "name" : "PRODUCT",
+      "dataType" : "VARCHAR",
+      "length" : 26,
+      "nullable" : true
+    }, {
+      "name" : "YEARS",
+      "dataType" : "VARCHAR",
+      "length" : 26,
+      "nullable" : true
+    }, {
+      "name" : "PRODUCT_TYPE",
+      "dataType" : "VARCHAR",
+      "length" : 26,
+      "nullable" : true
+    }, {
+      "name" : "ACCOUNT",
+      "dataType" : "VARCHAR",
+      "length" : 26,
+      "nullable" : true
+    }, {
+      "name" : "DATATYPE",
+      "dataType" : "VARCHAR",
+      "length" : 26,
+      "nullable" : true
+    }, {
+      "name" : "PERIOD",
+      "dataType" : "VARCHAR",
+      "length" : 45,
+      "nullable" : true
+    }, {
+      "name" : "AMOUNT",
+      "dataType" : "NUMERIC",
+      "length" : 0,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    },
+    "joins" : [ {
+      "rightTable" : "physicalTable:MyDatabase.ADMIN.DIM_ENTITY_RT",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.ADMIN.FACT_SALES_NEW.ENTITY",
+        "rightColumn" : "physicalColumn:MyDatabase.ADMIN.DIM_ENTITY_RT.MEMBER_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:MyDatabase.ADMIN.DIM_ENTITY_UPDATED",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.ADMIN.FACT_SALES_NEW.ENTITY",
+        "rightColumn" : "physicalColumn:MyDatabase.ADMIN.DIM_ENTITY_UPDATED.MEMBER_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:MyDatabase.ADMIN.DIM_ACCOUNT_NEW",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.ADMIN.FACT_SALES_NEW.ACCOUNT",
+        "rightColumn" : "physicalColumn:MyDatabase.ADMIN.DIM_ACCOUNT_NEW.MEMBER_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:MyDatabase.ADMIN.DIM_PERIOD_NEW",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.ADMIN.FACT_SALES_NEW.PERIOD",
+        "rightColumn" : "physicalColumn:MyDatabase.ADMIN.DIM_PERIOD_NEW.MEMBER_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:MyDatabase.ADMIN.DIM_MANAGEMENT_UNIT_NEW",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.ADMIN.FACT_SALES_NEW.MANAGEMENTUNIT",
+        "rightColumn" : "physicalColumn:MyDatabase.ADMIN.DIM_MANAGEMENT_UNIT_NEW.MEMBER_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:MyDatabase.ADMIN.DIM_CUSTOMER_NEW",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.ADMIN.FACT_SALES_NEW.CUSTOMER",
+        "rightColumn" : "physicalColumn:MyDatabase.ADMIN.DIM_CUSTOMER_NEW.MEMBER_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:MyDatabase.ADMIN.DIM_CHANNEL_NEW",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.ADMIN.FACT_SALES_NEW.CHANNEL",
+        "rightColumn" : "physicalColumn:MyDatabase.ADMIN.DIM_CHANNEL_NEW.MEMBER_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    }, {
+      "rightTable" : "physicalTable:MyDatabase.ADMIN.DIM_PRODUCT_RT",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.ADMIN.FACT_SALES_NEW.PRODUCT",
+        "rightColumn" : "physicalColumn:MyDatabase.ADMIN.DIM_PRODUCT_RT.MEMBER_KEY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

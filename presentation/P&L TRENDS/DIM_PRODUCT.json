@@ -1,0 +1,20 @@
+{
+  "presentationTable" : {
+    "name" : "DIM_PRODUCT",
+    "presentationColumns" : [ {
+      "name" : "PRODUCT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_PRODUCT.PRODUCT"
+    }, {
+      "name" : "PARENT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_PRODUCT.PARENT"
+    }, {
+      "name" : "ALIAS_DEFAULT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_PRODUCT.ALIAS_DEFAULT"
+    } ],
+    "hierarchies" : [ {
+      "name" : "DIM_PRODUCT",
+      "sourceLogicalTable" : "logicalTable:UNILEVER_BMM.DIM_PRODUCT",
+      "displayColumn" : "presentationColumn:P&L TRENDS.DIM_PRODUCT.ALIAS_DEFAULT"
+    } ]
+  }
+}

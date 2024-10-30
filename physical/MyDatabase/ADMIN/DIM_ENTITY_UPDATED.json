@@ -1,0 +1,41 @@
+{
+  "physicalTable" : {
+    "name" : "DIM_ENTITY_UPDATED",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "MEMBER_KEY",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : true
+    }, {
+      "name" : "ANCESTOR_KEY",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : true
+    }, {
+      "name" : "RELATIONSHIP_DISTANCE",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : true
+    }, {
+      "name" : "IS_LEAF",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    },
+    "joins" : [ {
+      "rightTable" : "physicalTable:MyDatabase.ADMIN.DIM_ENTITY",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.ADMIN.DIM_ENTITY_UPDATED.ANCESTOR_KEY",
+        "rightColumn" : "physicalColumn:MyDatabase.ADMIN.DIM_ENTITY.ENTITY"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "presentationTable" : {
+    "name" : "DIM_PERIOD",
+    "presentationColumns" : [ {
+      "name" : "PERIOD",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_PERIOD.PERIOD"
+    }, {
+      "name" : "PARENT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_PERIOD.PARENT"
+    }, {
+      "name" : "ALIAS_DEFAULT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_PERIOD.ALIAS_DEFAULT"
+    } ],
+    "hierarchies" : [ {
+      "name" : "PERIOD PARENT CHILD",
+      "sourceLogicalTable" : "logicalTable:UNILEVER_BMM.DIM_PERIOD",
+      "displayColumn" : "presentationColumn:BUSINESS PERFORMANCE.DIM_PERIOD.ALIAS_DEFAULT"
+    } ]
+  }
+}

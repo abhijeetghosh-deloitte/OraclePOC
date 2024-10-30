@@ -1,0 +1,21 @@
+{
+  "presentationTable" : {
+    "name" : "DIM_PRODUCT",
+    "presentationColumns" : [ {
+      "name" : "PRODUCT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_PRODUCT.PRODUCT"
+    }, {
+      "name" : "PARENT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_PRODUCT.PARENT"
+    }, {
+      "name" : "ALIAS_DEFAULT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_PRODUCT.ALIAS_DEFAULT"
+    } ],
+    "hierarchies" : [ {
+      "name" : "Product Parent-Child",
+      "sourceLogicalTable" : "logicalTable:UNILEVER_BMM.DIM_PRODUCT",
+      "displayColumn" : "presentationColumn:BUSINESS PERFORMANCE.DIM_PRODUCT.ALIAS_DEFAULT",
+      "localization" : { }
+    } ]
+  }
+}

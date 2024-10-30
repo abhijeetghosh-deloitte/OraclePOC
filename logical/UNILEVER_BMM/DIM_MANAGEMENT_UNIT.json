@@ -1,0 +1,96 @@
+{
+  "logicalTable" : {
+    "name" : "DIM_MANAGEMENT_UNIT",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "MANAGEMENTUNIT" ],
+    "logicalColumns" : [ {
+      "name" : "MANAGEMENTUNIT",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_MANAGEMENT_UNIT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_MANAGEMENT_UNIT.MANAGEMENTUNIT" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "PARENT",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_MANAGEMENT_UNIT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_MANAGEMENT_UNIT.PARENT" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "ALIAS_DEFAULT",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_MANAGEMENT_UNIT",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_MANAGEMENT_UNIT.ALIAS_DEFAULT" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "DIM_MANAGEMENT_UNIT",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:MyDatabase.ADMIN.DIM_MANAGEMENT_UNIT" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "PARENT_CHILD",
+    "parentChildHierarchy" : {
+      "name" : "MANAGEMENT UNIT PARENT CHILD",
+      "description" : "Parent-Child",
+      "logicalLevels" : [ {
+        "name" : "Total",
+        "numberOfElements" : 4,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Detail",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "MANAGEMENTUNIT" ],
+        "displayKey" : "ALIAS_DEFAULT",
+        "parentKey" : "PARENT"
+      } ],
+      "relationshipTables" : [ {
+        "logicalTableSource" : "DIM_MANAGEMENT_UNIT",
+        "table" : "physicalTable:MyDatabase.ADMIN.DIM_MANAGEMENT_UNIT_NEW",
+        "memberKey" : "MEMBER_KEY",
+        "parentKey" : "ANCESTOR_KEY",
+        "distance" : "RELATIONSHIP_DISTANCE",
+        "leafNodeIdentifier" : "IS_LEAF"
+      } ]
+    },
+    "joins" : [ {
+      "rightTable" : "logicalTable:UNILEVER_BMM.DIM_MANAGEMENT_UNIT_NEW",
+      "joinType" : "INNER",
+      "cardinality" : "ONE_TO_MANY",
+      "drivingTable" : "None"
+    } ]
+  }
+}

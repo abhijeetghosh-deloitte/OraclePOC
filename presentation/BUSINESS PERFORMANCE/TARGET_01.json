@@ -1,0 +1,51 @@
+{
+  "presentationTable" : {
+    "name" : "TARGET_01",
+    "presentationColumns" : [ {
+      "name" : "COUNTRY",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.TARGET_01.COUNTRY"
+    }, {
+      "name" : "COUNTRY_11",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.TARGET_01.COUNTRY_11"
+    }, {
+      "name" : "CURRENCY",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.TARGET_01.CURRENCY"
+    }, {
+      "name" : "CUSTOMER",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.TARGET_01.CUSTOMER"
+    }, {
+      "name" : "MANAGEMENTUNIT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.TARGET_01.MANAGEMENTUNIT"
+    }, {
+      "name" : "ENTITY",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.TARGET_01.ENTITY"
+    }, {
+      "name" : "CHANNEL",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.TARGET_01.CHANNEL"
+    }, {
+      "name" : "VERSION",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.TARGET_01.VERSION"
+    }, {
+      "name" : "SCENARIO",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.TARGET_01.SCENARIO"
+    }, {
+      "name" : "PRODUCT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.TARGET_01.PRODUCT"
+    }, {
+      "name" : "YEARS",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.TARGET_01.YEARS"
+    }, {
+      "name" : "PRODUCT_TYPE",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.TARGET_01.PRODUCT_TYPE"
+    }, {
+      "name" : "ACCOUNT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.TARGET_01.ACCOUNT"
+    }, {
+      "name" : "DATATYPE",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.TARGET_01.DATATYPE"
+    }, {
+      "name" : "AMOUNT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.TARGET_01.AMOUNT"
+    } ]
+  }
+}

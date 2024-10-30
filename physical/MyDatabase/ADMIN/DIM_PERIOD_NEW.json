@@ -1,0 +1,41 @@
+{
+  "physicalTable" : {
+    "name" : "DIM_PERIOD_NEW",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "MEMBER_KEY",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : true
+    }, {
+      "name" : "ANCESTOR_KEY",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : true
+    }, {
+      "name" : "RELATIONSHIP_DISTANCE",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : true
+    }, {
+      "name" : "IS_LEAF",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    },
+    "joins" : [ {
+      "rightTable" : "physicalTable:MyDatabase.ADMIN.DIM_PERIOD",
+      "useJoinExpression" : false,
+      "joinConditions" : [ {
+        "leftColumn" : "physicalColumn:MyDatabase.ADMIN.DIM_PERIOD_NEW.ANCESTOR_KEY",
+        "rightColumn" : "physicalColumn:MyDatabase.ADMIN.DIM_PERIOD.PERIOD"
+      } ],
+      "joinType" : "INNER",
+      "cardinality" : "MANY_TO_ONE"
+    } ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "logicalTable" : {
+    "name" : "DIM_ENTITY",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "ENTITY" ],
+    "logicalColumns" : [ {
+      "name" : "ENTITY",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_ENTITY",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_ENTITY.ENTITY" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "PARENT",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_ENTITY",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_ENTITY.PARENT" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "ALIAS_DEFAULT",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_ENTITY",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_ENTITY.ALIAS_DEFAULT" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "DIM_ENTITY",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:MyDatabase.ADMIN.DIM_ENTITY" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "PARENT_CHILD",
+    "parentChildHierarchy" : {
+      "name" : "ENTITY PARENT CHILD",
+      "description" : "Parent-Child",
+      "logicalLevels" : [ {
+        "name" : "Total",
+        "numberOfElements" : 4,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Detail",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "ENTITY" ],
+        "displayKey" : "ALIAS_DEFAULT",
+        "parentKey" : "PARENT"
+      } ],
+      "relationshipTables" : [ {
+        "logicalTableSource" : "DIM_ENTITY",
+        "table" : "physicalTable:MyDatabase.ADMIN.DIM_ENTITY_UPDATED",
+        "memberKey" : "MEMBER_KEY",
+        "parentKey" : "ANCESTOR_KEY",
+        "distance" : "RELATIONSHIP_DISTANCE",
+        "leafNodeIdentifier" : "IS_LEAF"
+      } ]
+    },
+    "joins" : [ {
+      "rightTable" : "logicalTable:UNILEVER_BMM.DIM_ENTITY_UPDATED",
+      "joinType" : "INNER",
+      "cardinality" : "ONE_TO_MANY",
+      "drivingTable" : "None"
+    } ]
+  }
+}

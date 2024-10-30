@@ -1,0 +1,39 @@
+{
+  "subjectArea" : {
+    "name" : "UNILEVER SEA",
+    "sourceBusinessModel" : "businessModel:UNILEVER_BMM",
+    "tableOrder" : [ {
+      "name" : "presentationTable:UNILEVER SEA.FACT_SALES_NEW"
+    }, {
+      "name" : "presentationTable:UNILEVER SEA.DIM_ENTITY"
+    }, {
+      "name" : "presentationTable:UNILEVER SEA.DIM_ENTITY_UPDATED"
+    }, {
+      "name" : "presentationTable:UNILEVER SEA.DIM_ACCOUNT"
+    }, {
+      "name" : "presentationTable:UNILEVER SEA.DIM_ACCOUNT_NEW"
+    }, {
+      "name" : "presentationTable:UNILEVER SEA.DIM_PERIOD"
+    }, {
+      "name" : "presentationTable:UNILEVER SEA.DIM_PERIOD_NEW"
+    }, {
+      "name" : "presentationTable:UNILEVER SEA.DIM_MANAGEMENT_UNIT"
+    }, {
+      "name" : "presentationTable:UNILEVER SEA.DIM_MANAGEMENT_UNIT_NEW"
+    }, {
+      "name" : "presentationTable:UNILEVER SEA.DIM_CUSTOMER"
+    }, {
+      "name" : "presentationTable:UNILEVER SEA.DIM_CUSTOMER_NEW"
+    }, {
+      "name" : "presentationTable:UNILEVER SEA.DIM_CHANNEL"
+    }, {
+      "name" : "presentationTable:UNILEVER SEA.DIM_CHANNEL_NEW"
+    }, {
+      "name" : "presentationTable:UNILEVER SEA.DIM_PRODUCT_RT"
+    }, {
+      "name" : "presentationTable:UNILEVER SEA.DIM_PRODUCT"
+    }, {
+      "name" : "presentationTable:UNILEVER SEA.TARGET_01"
+    } ]
+  }
+}

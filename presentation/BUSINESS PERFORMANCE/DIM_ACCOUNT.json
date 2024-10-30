@@ -1,0 +1,21 @@
+{
+  "presentationTable" : {
+    "name" : "DIM_ACCOUNT",
+    "presentationColumns" : [ {
+      "name" : "ACCOUNT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_ACCOUNT.ACCOUNT"
+    }, {
+      "name" : "PARENT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_ACCOUNT.PARENT"
+    }, {
+      "name" : "ALIAS_DEFAULT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_ACCOUNT.ALIAS_DEFAULT"
+    } ],
+    "hierarchies" : [ {
+      "name" : "ACCOUNT PARENT CHILD",
+      "sourceLogicalTable" : "logicalTable:UNILEVER_BMM.DIM_ACCOUNT",
+      "displayColumn" : "presentationColumn:BUSINESS PERFORMANCE.DIM_ACCOUNT.ALIAS_DEFAULT",
+      "localization" : { }
+    } ]
+  }
+}

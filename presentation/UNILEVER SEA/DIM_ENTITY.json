@@ -1,0 +1,20 @@
+{
+  "presentationTable" : {
+    "name" : "DIM_ENTITY",
+    "presentationColumns" : [ {
+      "name" : "ENTITY",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_ENTITY.ENTITY"
+    }, {
+      "name" : "PARENT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_ENTITY.PARENT"
+    }, {
+      "name" : "ALIAS_DEFAULT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_ENTITY.ALIAS_DEFAULT"
+    } ],
+    "hierarchies" : [ {
+      "name" : "ENTITY PARENT CHILD",
+      "sourceLogicalTable" : "logicalTable:UNILEVER_BMM.DIM_ENTITY",
+      "displayColumn" : "presentationColumn:UNILEVER SEA.DIM_ENTITY.ALIAS_DEFAULT"
+    } ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "physicalTable" : {
+    "name" : "DIM_ENTITY_NEW1",
+    "sourceType" : "TABLE",
+    "physicalColumns" : [ {
+      "name" : "MEMBER_KEY",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : true
+    }, {
+      "name" : "ANCESTOR_KEY",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : true
+    }, {
+      "name" : "RELATIONSHIP_DISTANCE",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : true
+    }, {
+      "name" : "IS_LEAF",
+      "dataType" : "VARCHAR",
+      "length" : 255,
+      "nullable" : true
+    } ],
+    "caching" : {
+      "enable" : true,
+      "expiryTime" : 0
+    }
+  }
+}

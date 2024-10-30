@@ -1,0 +1,7 @@
+{
+  "physicalTable" : {
+    "name" : "DIM_ENTITY_ALIAS",
+    "sourceTable" : "physicalTable:MyDatabase.ADMIN.DIM_ENTITY",
+    "overrideSourceCacheSetting" : false
+  }
+}

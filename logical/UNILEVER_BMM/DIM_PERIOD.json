@@ -1,0 +1,96 @@
+{
+  "logicalTable" : {
+    "name" : "DIM_PERIOD",
+    "type" : "DIMENSION",
+    "primaryKey" : [ "PERIOD" ],
+    "logicalColumns" : [ {
+      "name" : "PERIOD",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_PERIOD",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_PERIOD.PERIOD" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "PARENT",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_PERIOD",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_PERIOD.PARENT" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    }, {
+      "name" : "ALIAS_DEFAULT",
+      "dataType" : "VARCHAR",
+      "writeable" : false,
+      "logicalColumnSource" : {
+        "derivedFrom" : "PHYSICAL_COLUMNS",
+        "physicalMappings" : [ {
+          "logicalTableSource" : "DIM_PERIOD",
+          "physicalExpression" : {
+            "expressionTemplate" : "%1",
+            "expressionObjects" : [ "physicalColumn:MyDatabase.ADMIN.DIM_PERIOD.ALIAS_DEFAULT" ]
+          }
+        } ]
+      },
+      "logicalLevel" : "Detail"
+    } ],
+    "logicalTableSources" : [ {
+      "name" : "DIM_PERIOD",
+      "disable" : false,
+      "tableMapping" : {
+        "tables" : [ "physicalTable:MyDatabase.ADMIN.DIM_PERIOD" ]
+      },
+      "combineWithOtherFragments" : false,
+      "enableFragmentSelection" : false,
+      "distinctValues" : false
+    } ],
+    "hierarchyType" : "PARENT_CHILD",
+    "parentChildHierarchy" : {
+      "name" : "PERIOD PARENT CHILD",
+      "description" : "Parent-Child",
+      "logicalLevels" : [ {
+        "name" : "Total",
+        "numberOfElements" : 4,
+        "grandTotalLevel" : true,
+        "disableAggregateToHigherLevel" : false
+      }, {
+        "name" : "Detail",
+        "numberOfElements" : 1,
+        "grandTotalLevel" : false,
+        "disableAggregateToHigherLevel" : false,
+        "primaryKey" : [ "PERIOD" ],
+        "displayKey" : "ALIAS_DEFAULT",
+        "parentKey" : "PARENT"
+      } ],
+      "relationshipTables" : [ {
+        "logicalTableSource" : "DIM_PERIOD",
+        "table" : "physicalTable:MyDatabase.ADMIN.DIM_PERIOD_NEW",
+        "memberKey" : "MEMBER_KEY",
+        "parentKey" : "ANCESTOR_KEY",
+        "distance" : "RELATIONSHIP_DISTANCE",
+        "leafNodeIdentifier" : "IS_LEAF"
+      } ]
+    },
+    "joins" : [ {
+      "rightTable" : "logicalTable:UNILEVER_BMM.DIM_PERIOD_NEW",
+      "joinType" : "INNER",
+      "cardinality" : "ONE_TO_MANY",
+      "drivingTable" : "None"
+    } ]
+  }
+}

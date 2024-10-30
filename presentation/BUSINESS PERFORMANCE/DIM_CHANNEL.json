@@ -1,0 +1,20 @@
+{
+  "presentationTable" : {
+    "name" : "DIM_CHANNEL",
+    "presentationColumns" : [ {
+      "name" : "CHANNEL",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_CHANNEL.CHANNEL"
+    }, {
+      "name" : "PARENT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_CHANNEL.PARENT"
+    }, {
+      "name" : "ALIAS_DEFAULT",
+      "sourceLogicalColumn" : "logicalColumn:UNILEVER_BMM.DIM_CHANNEL.ALIAS_DEFAULT"
+    } ],
+    "hierarchies" : [ {
+      "name" : "CHANNEL PARENT CHILD",
+      "sourceLogicalTable" : "logicalTable:UNILEVER_BMM.DIM_CHANNEL",
+      "displayColumn" : "presentationColumn:BUSINESS PERFORMANCE.DIM_CHANNEL.ALIAS_DEFAULT"
+    } ]
+  }
+}
